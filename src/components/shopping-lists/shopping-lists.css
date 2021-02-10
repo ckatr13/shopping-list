@@ -22,11 +22,14 @@
 
   h1 {
       color: white;
+      display: inline;
   }
   
   .edit {
-    width: 20px;
+    width: 40px;
     padding: 10px;
+    background-color: unset;
+    border: none;
   }
   
   .remove {
@@ -39,12 +42,14 @@
     border: none;
   }
 
-  .remove:focus {
-    outline: rgb(255, 255, 255) auto 1px;
+  .remove:focus, .edit:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.5);
 }
   
   .pencil {
     width: 40px;
+    height: 40px;
     margin-left: -10px;
     margin-top: -10px;
     cursor: pointer;
@@ -78,4 +83,8 @@
     cursor: pointer;
     border-radius: 10px;
     border-color: #8EF187;
+  }
+
+  .hide {
+      display: none;
   }

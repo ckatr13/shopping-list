@@ -1,0 +1,121 @@
+form {
+    margin-top: 20px;
+}
+
+.lable {
+    color: white;
+    margin-right: 10px;
+}
+
+button {
+    margin-left: 10px;
+}
+
+.category {
+    background-color: #8ef187;
+    margin-top: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+.grocery-list {
+    background-color: white;
+    opacity: 0.8;
+    margin-top: 0px;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.grocery-item {
+    border: gray solid 1px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkbox-container {
+    border-left: gray solid 1px;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox {
+    cursor: pointer;    
+}
+
+.item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.amount-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: gray solid 1px;
+    border-right: gray solid 1px;
+    width: 70px;
+}
+
+.p {
+    margin: 0;
+}
+
+.edit-item-button {
+    width: 40px;
+    height: 30px;
+    margin-left: 0px;
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+}
+
+.edit-item-button:focus, 
+    .remove-item:focus {
+    outline: none;
+    background-color: #8ef187;
+}
+
+.edit-items {
+    height: 30px;
+}
+
+.edit-item-container {
+    border-left: gray solid 1px;
+    border-right: gray solid 1px;
+    
+}
+
+.list-group {
+    display: flex;
+}
+
+.remove-item {
+    width: 40px;
+    height: 30px;
+    margin-left: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.add-item {
+    height: 40px;
+    width: 120px;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+.add-item:focus {
+    background-color: #8ef187;
+    outline: none;
+}
