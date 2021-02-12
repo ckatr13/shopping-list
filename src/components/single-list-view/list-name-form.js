@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './list.css';
 
 export const ListNameForm = (props) => {
-    const { editName, viewLists, setEditName, updateList, listName, setListName, lists } = props;
+    const { editName, setEditName, updateList, listName, setListName, lists } = props;
     const [text, setText] = useState('');
 
 
@@ -38,7 +38,7 @@ export const ListNameForm = (props) => {
 
     return (
         <div>
-            <form style={{ display: !viewLists && editName ? "block" : "none" }}>
+            <form style={{ display: editName ? "block" : "none" }}>
                 <label className="lable">Edit Name</label>
                 <input 
                     id="update-title"         

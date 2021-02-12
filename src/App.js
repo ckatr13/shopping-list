@@ -6,85 +6,92 @@ import './App.css';
 import { ShoppingList } from './components/shopping-lists/shopping-list';
 import { ShoppingListForm } from './components/shopping-lists/shopping-list-form';
 import { List } from './components/single-list-view/list';
-import { generateId } from './utilities';
+// import { generateId } from './utilities';
 // import { render } from '@testing-library/react';
 
 const App = () =>  {
-  const [lists, setLists] = useState([
-    {
-      id: generateId(),
-      name: "Shopping List",
-      groceries: [        
-          {
-              id: generateId(),
-              category: 'Produce',
-              items: [{id: generateId(), item: "Apples", amount: "4"}, 
-                      {id: generateId(), item: "Broccoli", amount: "1 head"}, 
-                      {id: generateId(), item: "Spinach", amount: "1 box"}],
-          }, 
-          {
-              id: generateId(),
-              category: 'Dairy',
-              items: [{id: generateId(), item: "Milk", amount: "1 gallon"}, 
-                      {id: generateId(), item: "Cheese", amount: "1 pack"}],
-          },
-          {
-              id: generateId(),
-              category: 'Beverages',
-              items: [{id: generateId(), item: "Juice", amount: "2 liters"}, 
-                      {id: generateId(), item: "Bottled Water", amount: "1 case"}],
-          },
-          {
-              id: generateId(),
-              category: 'Deli',
-              items: [{id: generateId(), item: "Ham", amount: "1 pound"}, 
-                      {id: generateId(), item: "Sushi", amount: "1 dozen"}],
-          },
-          {
-              id: generateId(),
-              category: 'Bakery',
-              items: [{id: generateId(), item: "Bread", amount: "3 loafs"}],
-          },
-          {
-              id: generateId(),
-              category: 'Pantry',
-              items: [{id: generateId(), item: "Crackers", amount: "1 box"}, 
-                      {id: generateId(), item: "Cereal", amount: "1 box"}, 
-                      {id: generateId(), item: "Coffee", amount: "1 bag"}],
-          },
-          {
-              id: generateId(),
-              category: 'Frozen',
-              items: [{id: generateId(), item: "Ice Cream", amount: "2 pints"}, 
-                      {id: generateId(), item: "Frozen Peas", amount: "1 bag"} ],
-          },
-          {
-              id: generateId(),
-              category: 'Meat',
-              items: [{}],
-          },
-          {
-              id: generateId(),
-              category: 'Other',
-              items: [{id: generateId(), item: "Shampoo", amount: "1 bottle"}, 
-                      {id: generateId(), item: "Toilet Paper", amount: "1 bundle"}],
-          },
-      ]
-  }, 
-  {
-      id: generateId(),
-      name: "list",
-      groceries: [        
-          {
-              id: generateId(),
-              category: 'Produce',
-              items: [{id: generateId(), item: "Apples", amount: "4"}, 
-                      {id: generateId(), item: "Broccoli", amount: "1 head"}, 
-                      {id: generateId(), item: "Spinach", amount: "1 box"}],
-          }, 
-      ]
-  }
-]);
+  const [lists, setLists] = useState([]);
+    // {
+    //   id: generateId(),
+    //   name: "Shopping List",
+    //   groceries: [        
+    //       {
+    //           id: generateId(),
+    //           category: 'Produce',
+    //           items: [{id: generateId(), item: "Apples", amount: "4", recipe: "Pie"}, 
+    //                   {id: generateId(), item: "Broccoli", amount: "1 head", recipe: "Soup"}, 
+    //                   {id: generateId(), item: "Spinach", amount: "1 box", recipe: "None"}],
+    //       }, 
+    //       {
+    //           id: generateId(),
+    //           category: 'Dairy',
+    //           items: [{id: generateId(), item: "Milk", amount: "1 gallon"}, 
+    //                   {id: generateId(), item: "Cheese", amount: "1 pack"}],
+    //       },
+    //       {
+    //           id: generateId(),
+    //           category: 'Beverages',
+    //           items: [{id: generateId(), item: "Juice", amount: "2 liters"}, 
+    //                   {id: generateId(), item: "Bottled Water", amount: "1 case"}],
+    //       },
+    //       {
+    //           id: generateId(),
+    //           category: 'Deli',
+    //           items: [{id: generateId(), item: "Ham", amount: "1 pound"}, 
+    //                   {id: generateId(), item: "Sushi", amount: "1 dozen"}],
+    //       },
+    //       {
+    //           id: generateId(),
+    //           category: 'Bakery',
+    //           items: [{id: generateId(), item: "Bread", amount: "3 loafs"}],
+    //       },
+    //       {
+    //           id: generateId(),
+    //           category: 'Pantry',
+    //           items: [{id: generateId(), item: "Crackers", amount: "1 box"}, 
+    //                   {id: generateId(), item: "Cereal", amount: "1 box"}, 
+    //                   {id: generateId(), item: "Coffee", amount: "1 bag"}],
+    //       },
+    //       {
+    //           id: generateId(),
+    //           category: 'Frozen',
+    //           items: [{id: generateId(), item: "Ice Cream", amount: "2 pints"}, 
+    //                   {id: generateId(), item: "Frozen Peas", amount: "1 bag"} ],
+    //       },
+    //       {
+    //           id: generateId(),
+    //           category: 'Meat',
+    //           items: [{}],
+    //       },
+    //       {
+    //           id: generateId(),
+    //           category: 'Other',
+    //           items: [{id: generateId(), item: "Shampoo", amount: "1 bottle"}, 
+    //                   {id: generateId(), item: "Toilet Paper", amount: "1 bundle"}],
+    //       },
+      // ]
+  // }, 
+  // {
+  //     id: generateId(),
+  //     name: "list",
+  //     groceries: [        
+  //         {
+  //             id: generateId(),
+  //             category: 'Produce',
+  //             items: [{id: generateId(), item: "Apples", amount: "4"}, 
+  //                     {id: generateId(), item: "Broccoli", amount: "1 head"}, 
+  //                     {id: generateId(), item: "Spinach", amount: "1 box"}],
+  //         }, 
+  //     ]
+  // }
+
+lists.map((list) => {
+  return list.groceries.map((category) => {
+      return category.items.sort((a, b) => (a.item > b.item) ? 1 : -1);
+  })
+})
+
+
 
   const [viewLists, setViewLists] = useState(true);
   const [listName, setListName] = useState("");
@@ -120,27 +127,21 @@ const App = () =>  {
     )
   }
 
-
-
-  //     lists.forEach((list) => {
-  //       if(list.name === listName) {
-  //         list.groceries.forEach((category) => {
-  //           category.items.forEach((item) => {
-  //             if(item.id !== itemIdToRemove) {
-  //               category.items.filter((item) => item.id !== itemIdToRemove)
-  //               console.log(lists)
-  //             }
-  //           })
-  //           // category.items.filter((item) => item.id !== itemIdToRemove)
-  //         })
-  //         console.log(lists)
-  //       }
-  //     })
-  //   })
-  // }
-
-  // let itemNames = nestedObject.filter( 
-  //   eachObj => eachObj.itemDetails.price === 1500)
+  const addNewItem = (item, category, list) => {
+    lists.map((li) => {
+      if(li.name === list) {
+        return li.groceries.forEach((obj) => {
+          if(obj.category.toLowerCase() === category) {
+            obj.items.push(item);
+          }
+        })
+      }
+      return ""; 
+    })
+    setLists((prev) => [
+      ...prev 
+    ]);
+  }
 
   const updateList = (id, text) => {
     setLists(lists.map((list) => {
@@ -152,8 +153,14 @@ const App = () =>  {
 }
 
   const handleView = () => {
-    return setViewLists(true);
+    if (!viewLists && !viewEditItem) {
+      return setViewLists(true);
+    } else if (viewEditItem) {
+      return setViewEditItem(false);
+    }
  };
+
+ const [ viewEditItem, setViewEditItem ] = useState(false);
 
   const handleClick = () => {
     if (!editName) {
@@ -164,8 +171,6 @@ const App = () =>  {
   }
 
   console.log(lists);
-  // console.log(listName);
-  
 
     return (
       <div className="App">
@@ -208,7 +213,7 @@ const App = () =>  {
                 setListName={setListName}
               />
             ))}
-            <List 
+            {!viewLists ? <List 
                 editName={editName}
                 viewLists={viewLists}
                 setEditName={setEditName}
@@ -217,7 +222,10 @@ const App = () =>  {
                 setListName={setListName}
                 lists={lists}
                 removeItem={removeItem}
-            />
+                addNewItem={addNewItem}
+                viewEditItem={viewEditItem}
+                setViewEditItem={setViewEditItem}
+            /> : ""}
         </div>
       </div>
     );

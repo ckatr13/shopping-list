@@ -12,17 +12,3 @@ export function isEmpty(obj) {
   }
   return true;
 }
-
-// export function customValidate(lists) {
-//   const createListForm = document.getElementById("title");
-//   console.log(createListForm)
-//   createListForm.addEventListener("input", function (event) {
-//     lists.map((list) => {
-//       if (event.target.value === list.name) {
-//         createListForm.setCustomValidity("This name already exists!");
-//       } else {
-//         createListForm.setCustomValidity("");
-//       }
-//     })
-//   });
-// }

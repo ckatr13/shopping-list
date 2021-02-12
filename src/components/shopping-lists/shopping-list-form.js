@@ -16,15 +16,15 @@ export const ShoppingListForm = (props) => {
           id: generateId(),
           name: text,
           groceries: [        
-            {id: generateId(), category: 'Produce', items: [{}]}, 
-            {id: generateId(), category: 'Dairy', items: [{}]},
-            {id: generateId(), category: 'Beverages', items: [{}]},
-            {id: generateId(), category: 'Deli', items: [{}]},
-            {id: generateId(), category: 'Bakery', items: [{}]},
-            {id: generateId(), category: 'Pantry', items: [{}]},
-            {id: generateId(), category: 'Frozen', items: [{id: 1, item: "Ice Cream", amount: "2 pints"}]},
-            {id: generateId(), category: 'Meat', items: [{}]},
-            {id: generateId(), category: 'Other', items: [{}]},
+            {id: generateId(), category: 'Produce', items: []}, 
+            {id: generateId(), category: 'Dairy', items: []},
+            {id: generateId(), category: 'Beverages', items: []},
+            {id: generateId(), category: 'Pantry', items: []},
+            {id: generateId(), category: 'Meat', items: []},
+            {id: generateId(), category: 'Frozen', items: []},
+            {id: generateId(), category: 'Deli', items: []},
+            {id: generateId(), category: 'Bakery', items: []},
+            {id: generateId(), category: 'Other', items: []},
           ]
         };
         if (text.length > 0) {

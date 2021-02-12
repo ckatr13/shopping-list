@@ -3,7 +3,7 @@ form {
 }
 
 .lable {
-    color: white;
+    /* color: white; */
     margin-right: 10px;
 }
 
@@ -118,4 +118,22 @@ h2 {
 .add-item:focus {
     background-color: #8ef187;
     outline: none;
+}
+
+.view-category {
+    color: white;
+    margin-top: 20px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: unset;
+    border: none;
+}
+
+.view-category:focus {
+    color: #8ef187;
+    outline: unset;
+}
+
+#view-category {
+    margin-right: 20px;
 }

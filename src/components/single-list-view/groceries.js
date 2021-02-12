@@ -1,15 +1,10 @@
 import React from 'react';
 import './list.css';
 import { isEmpty } from '../../utilities';
-import pencil from '../../pencil-60-119100.webp';
+// import pencil from '../../pencil-60-119100.webp';
 
 export const Groceries = (props) => {
-    const { lists, viewLists, listName, removeItem } = props;
-
-    const handleRemove = (event) => {
-        let id = Number(event.target.id);
-        removeItem(id);
-    };
+    const { lists, viewLists, listName, handleRemove } = props;
 
     return (
         <div>
@@ -38,13 +33,13 @@ export const Groceries = (props) => {
                                                         </div>
                                                     </div>
                                                     <div className="list-group">
-                                                        <div className="edit-item-container">
+                                                        {/* <div className="edit-item-container">
                                                             <button 
                                                                 className="edit-item-button"
                                                                 aria-label="Edit list">
                                                                 <img className="edit-items" src={pencil} alt="edit"></img>
                                                             </button>
-                                                        </div>
+                                                        </div> */}
                                                         <div className="edit-item-container">
                                                             <button 
                                                                 className="remove-item"
