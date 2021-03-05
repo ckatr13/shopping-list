@@ -7,40 +7,56 @@ form {
     margin-right: 10px;
 }
 
-button {
-    margin-left: 10px;
-}
-
 .category {
-    background-color: #8ef187;
-    margin-top: 10px;
+    background-color: #E8876F;
     height: 40px;
+    width: calc(100% - 20px);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    border-radius: 0px 10px 10px 0px;
 }
+
+.category-name {
+    display: block;
+    margin-top: -10px;
+}
+
+.category-h2 {
+    line-height: 46px;
+    color: white;
+}
+
+.trash-2 {
+    height: 22px;
+    margin-top: 2px;
+}
+
 
 h2 {
     font-size: 1.3em;
 }
 
 .grocery-list {
-    background-color: white;
-    opacity: 0.8;
     margin-top: 0px;
     list-style-type: none;
     padding-inline-start: 0;
 }
 
 .grocery-item {
-    border: gray solid 1px;
+    background-color: #DBFBF4;
+    border: #009372 solid 1px;
     height: 30px;
+    width: calc(100% - 40px);
     display: flex;
     justify-content: space-between;
+    border-radius: 0px 0px 10px 0px;
 }
 
 .checkbox-container {
-    border-left: gray solid 1px;
+    position: relative;
+    cursor: pointer; 
+    border-left: #009372 solid 1px;
     width: 40px;
     height: 30px;
     display: flex;
@@ -48,9 +64,41 @@ h2 {
     align-items: center;
 }
 
-.checkbox {
-    cursor: pointer;    
-}
+input[type=checkbox] { 
+    visibility: hidden; 
+} 
+
+.checkmark { 
+    position: absolute; 
+    top: 3px; 
+    left: 8px; 
+    height: 20px; 
+    width: 20px;  
+    border: #009372 solid 2px;
+    border-radius: 8px;
+} 
+
+.checkmark:after { 
+    content: ""; 
+    position: absolute; 
+    display: none; 
+} 
+
+.checkbox-container input:checked ~ .checkmark:after { 
+    display: block; 
+} 
+
+.checkbox-container .checkmark:after { 
+    left: 6px; 
+    bottom: 5px; 
+    width: 4px; 
+    height: 10px; 
+    border: solid #009372; 
+    border-width: 0 3px 3px 0; 
+    -webkit-transform: rotate(45deg); 
+    -ms-transform: rotate(45deg); 
+    transform: rotate(45deg); 
+} 
 
 .item-container {
     display: flex;
@@ -62,8 +110,8 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-left: gray solid 1px;
-    border-right: gray solid 1px;
+    border-left: #009372 solid 1px;
+    border-right: #009372 solid 1px;
     width: 70px;
 }
 
@@ -83,7 +131,7 @@ h2 {
 .edit-item-button:focus, 
     .remove-item:focus {
     outline: none;
-    background-color: #8ef187;
+    /* background-color: #8ef187; */
 }
 
 .edit-items {
@@ -91,9 +139,9 @@ h2 {
 }
 
 .edit-item-container {
-    border-left: gray solid 1px;
-    border-right: gray solid 1px;
-    
+    display: inline-block;
+    background-color: #D0F383;
+    border-radius: 0px 0px 10px 0px;
 }
 
 .list-group {
@@ -106,34 +154,90 @@ h2 {
     margin-left: 0;
     border: none;
     cursor: pointer;
+    background-color: unset;
 }
 
 .add-item {
-    height: 40px;
-    width: 120px;
+    height: 36px;
+    width: calc(50% - 4px);
+    background-color: #D0F383;
+    border: #DBFBF4 solid 1px;
+    font-family: 'Marker Felt', 'san-sarif';
+    color: #009372;
+    font-size: 18px;
     margin-top: 20px;
-    background-color: #ffffff;
 }
 
-.add-item:focus {
+.add-item:focus, .add-recipe-item:focus {
     background-color: #8ef187;
     outline: none;
 }
 
+.item1 {
+    margin-right: 8px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.item2 {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.add-recipe-item {
+    width: 40px;
+    height: 30px;
+    margin-left: 0;
+    border: none;
+    cursor: pointer;
+    font-family: 'Marker Felt', 'san-sarif';
+    color: #009372;
+    font-weight: bold;
+    font-size: 29px;
+    border-radius: 0px 0px 10px 0px;
+}
+
 .view-category {
-    color: white;
-    margin-top: 20px;
+    color: #DBFBF4;
     display: inline-block;
     cursor: pointer;
     background-color: unset;
     border: none;
+    font-family: 'Marker Felt', 'san-sarif';
+    margin-top: 20px;
 }
 
 .view-category:focus {
-    color: #8ef187;
     outline: unset;
 }
 
-#view-category {
-    margin-right: 20px;
+.edit-list-name-form {
+    padding-top: 10px;
+    font-family: 'Marker Felt', 'san-sarif';
+    color: #009372;
+}
+
+.edit-list-name-form-container {
+    height: 40px;
+    width: calc(100% - 50px);
+    background-color: #DBFBF4;
+    margin-top: -20px;
+    border-radius: 0px 0px 20px 0px;
+}
+
+.edit-list-name-button {
+    float: right; 
+    border-radius: 0px 0px 20px 0px;
+    height: 40px;
+    width: 100px;
+    margin-top: -10px;
+    border: #DBFBF4 solid 1px;
+    font-family: 'Marker Felt', 'san-sarif';
+    color: #DBFBF4;
+    background-color: #84C777;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.spacing {
+    height: 80px;
+    width: 100%;
 }

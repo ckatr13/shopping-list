@@ -50,6 +50,7 @@ export const ShoppingListForm = (props) => {
             style={{ display: viewLists ? "flex" : "none" }} 
             onSubmit={handleSubmit}
         >
+          <div className="list-name-input">
             <label htmlFor="title"><p className="label">List Name</p></label>
             <input 
                 id="title"         
@@ -61,7 +62,8 @@ export const ShoppingListForm = (props) => {
                 name="body" 
                 required>
             </input>
-        <button className="button" type="submit" value="Add">Create New List</button>
+          </div>
+        <button className="button" type="submit" value="Add">+ New List</button>
       </form>
     )
 }

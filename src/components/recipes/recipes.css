@@ -1,0 +1,151 @@
+.recipe-item-edit {
+    display: inline;
+    border-left: #009372 solid 1px;
+}
+
+.instructions {
+    background-color: #DBFBF4;
+    width: calc(100% - 60px);
+    border-radius: 0px 0px 10px 0px;
+    padding: 10px;
+}
+
+.inst-2 {
+    height: 200px;
+}
+
+.category-side {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.recipe-img {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    border: #E8876F solid 4px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.add-recipe-lable {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.addImg {
+    cursor: pointer;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #D0F383;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: calc(50% - 66px);
+    padding-right: calc(50% - 66px);
+    cursor: pointer;
+    width: 110px;
+}
+
+#recipe, #file, #output {
+    margin-top: 5px;
+    text-align: left;
+}
+
+#output {
+    cursor: pointer;
+    border-radius: 0px 0px 10px 10px;
+    margin-top: 0px;
+}
+
+.add-recipe-button {
+    margin-top: 10px;
+    width: 80px;
+    height: 30px;
+    background-color: #84C777;
+    color: #DBFBF4;
+    margin-bottom: 20px;
+}
+
+#instructions {
+    margin-top: 5px;
+}
+
+#instructions-label, .instructions-label {
+    color: #009372;
+    width: calc(100% - 50px);
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+}
+
+.instructions-label {
+    background-color: #D0F383;
+    padding-left: 10px;
+}
+
+#instructions-label {
+    padding-left: calc(100% - 50px);
+}
+
+#add-recipe-button {
+    height: 30px;
+    border-radius: 0px 10px 10px 0px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #D0F383;
+    font-family: 'Marker Felt', 'san-sarif';
+    font-size: 18px;
+    color: #009372;
+    font-weight: bold;
+    padding-left: calc(50% - 54px);
+    padding-right: calc(50% - 54px);
+    cursor: pointer;
+}
+
+#add-recipe-button:focus {
+    outline: none;
+}
+
+.add-recipe-name {
+    background-color: #DBFBF4;
+    height: 40px;
+    line-height: 39px;
+    margin-top: -40px;
+    width: 288px;
+}
+
+.recipe-img-container {
+    width: calc(100% - 30px);
+}
+
+.recipe-name {
+    border-radius: 0px 0px 10px 0px;
+    margin-top: -9px;
+    width: calc(100% - 22px);
+    height: 49px;
+}
+
+.recipe-name-h2 {
+    color: #DBFBF4;
+}
+
+.remove-recipe {
+    margin-right: 20px;
+    margin-top: 6px;
+}
+
+.down-button {
+    background-color: unset;
+    border: none; 
+    height: 29px;
+    margin-right: 10px;
+}
+
+.down-button:focus {
+    outline: none;
+}

@@ -1,21 +1,21 @@
 import React from 'react';
 import './list.css';
 import { isEmpty } from '../../utilities';
-// import pencil from '../../pencil-60-119100.webp';
+import trash from '../../trash.png';
 
 export const Groceries = (props) => {
-    const { lists, viewLists, listName, handleRemove } = props;
-
+    const { lists, viewLists, listName, handleRemove, handleCheck, handleClickCheck } = props;
+    
     return (
-        <div>
+        <div className="groceries">
             {lists.map((list) => {
                 if(listName === list.name) {
                     return list.groceries.map((category) => {
                         if(!viewLists && !isEmpty(category.items[0])) {
                             return (
                                 <div key={category.id}>
-                                    <div className="category">
-                                        <h2>{category.category}</h2>
+                                    <div className="category category-name">
+                                        <h2 className="category-h2">{category.category}</h2>
                                     </div>
                                     <ul className="grocery-list">
                                         {category.items.map((item) => {
@@ -23,7 +23,8 @@ export const Groceries = (props) => {
                                                 <li key={item.id} className="grocery-item">
                                                     <div className="list-group">
                                                         <div className="checkbox-container">
-                                                            <input className="checkbox" type="checkbox"></input>
+                                                            <input id={item.id + "check"} className="checkbox" type="checkbox" checked={item.checked} onChange={handleCheck} onClick={handleClickCheck}></input>
+                                                            <label htmlFor={item.id + "check"} className="checkmark"></label> 
                                                         </div>
                                                         <div className="amount-container">
                                                             <p className="p">{item.amount}</p>
@@ -33,20 +34,13 @@ export const Groceries = (props) => {
                                                         </div>
                                                     </div>
                                                     <div className="list-group">
-                                                        {/* <div className="edit-item-container">
-                                                            <button 
-                                                                className="edit-item-button"
-                                                                aria-label="Edit list">
-                                                                <img className="edit-items" src={pencil} alt="edit"></img>
-                                                            </button>
-                                                        </div> */}
                                                         <div className="edit-item-container">
                                                             <button 
                                                                 className="remove-item"
                                                                 aria-label="Remove list"
-                                                                id={item.id}
-                                                                onClick={handleRemove}
-                                                                >X
+                                                                >
+                                                                <img className="trash-2" src={trash} id={item.id + "a"}
+                                                                onClick={handleRemove} />
                                                             </button>
                                                         </div>
                                                     </div>

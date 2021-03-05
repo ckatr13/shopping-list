@@ -24,69 +24,113 @@ export const AddItem = (props) => {
         setMeasurement(event.target.value);
     }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    const submit = (recipe) => {
         props.setViewEditItem(false);
-        const item = {
-            id: generateId(), 
-            item: newItem, 
-            amount: quantity + " " + measurement, 
-            recipe: 'None'
-        };
-        props.addNewItem(item, category, props.listName)
+        let item;
+        if(!recipe) {
+            item = {
+                id: generateId().toString(), 
+                item: newItem, 
+                amount: quantity + " " + measurement, 
+                recipe: 'Other',
+                addState: false,
+                checked: false
+            };
+            props.addNewItem(item, category, props.listName)
+        } else {
+            const recipeItem = {
+                id: generateId().toString(),
+                category: category,
+                name: newItem,
+                amount: quantity + " " + measurement,
+                recipe: recipe.name,
+                addState: true,
+            }
+            props.recipes.map(r => {
+                if(r.name === recipe.name) {
+                    return r.items.push(recipeItem);
+                }
+                return "";
+            })
+            props.setRecipes((prev) => [
+                ...prev
+            ]);
+            setNewItem('');
+            setCategory('');
+            setQuantity('');
+            setMeasurement('');
+        }
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault(); 
+            if (props.recipe) {
+                submit(props.recipe);
+            } else {
+                submit();
+            }
     }
 
     return (
-        <form  onSubmit={handleSubmit}>
-            <input
-                id="new-item"         
-                type="text"
-                aria-label="Add Item"
-                placeholder="+ Add Item"
-                value={newItem}
-                onChange={handleNewItemChange} 
-                name="body" 
-                required>      
-            </input>
-            <select 
-                id="select-category" 
-                name="category"
-                placeholder="Select"
-                // defaultValue
-                value={category}
-                onChange={handleCategoryChange}
-                required>
-                <option value=""> -- Select Type -- </option>
-                <option value="produce">Produce</option>
-                <option value="dairy">Dairy</option>
-                <option value="beverages">Beverages</option>
-                <option value="deli">Deli</option>
-                <option value="bakery">Bakery</option>
-                <option value="pantry">Pantry</option>
-                <option value="frozen">Frozen</option>
-                <option value="meat">Meat</option>
-                <option value="other">Other</option>
-            </select>
-            <br></br>
-            <label htmlFor="quantity">Quantity:</label>
-            <input 
-                type="number" 
-                id="quantity" 
-                name="quantity" 
-                min="1" max="100"
-                aria-label="quantity"
-                value={quantity}
-                onChange={handleQuantityChange}
-                required></input>
-            <input
-                id="measurement"         
-                type="text"
-                aria-label="form of measurement"
-                placeholder="Measurement"
-                value={measurement}
-                onChange={handleMeasurementChange} 
-                name="measurement" >      
-            </input>
+        <form className="add-item-form" onSubmit={handleSubmit}>
+            <div className="add-item-label">
+                <label className="new-item-label" htmlFor="new-item"> + Add Item</label>
+            </div>
+            <div className="add-item-inputs">
+                <div className="form-bar">
+                    <input
+                        id="new-item"         
+                        type="text"
+                        aria-label="Add Item"
+                        placeholder="Item name"
+                        value={newItem}
+                        onChange={handleNewItemChange} 
+                        name="body" 
+                        required>      
+                    </input>
+                    <select 
+                        id="select-category" 
+                        name="category"
+                        placeholder="Select"
+                        value={category}
+                        onChange={handleCategoryChange}
+                        required>
+                        <option value=""> -- Select Type -- </option>
+                        <option value="Produce">Produce</option>
+                        <option value="Dairy">Dairy</option>
+                        <option value="Beverages">Beverages</option>
+                        <option value="Deli">Deli</option>
+                        <option value="Bakery">Bakery</option>
+                        <option value="Pantry">Pantry</option>
+                        <option value="Frozen">Frozen</option>
+                        <option value="Meat">Meat</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <br></br>
+                </div>
+                <div className="form-bar" id="line">
+                    <label htmlFor="quantity">Quantity:</label>
+                    <input 
+                        type="string" 
+                        id="quantity" 
+                        name="quantity" 
+                        // min="1" max="100"
+                        aria-label="quantity"
+                        value={quantity}
+                        onChange={handleQuantityChange}
+                        style={{width: "40px"}}
+                        required></input>
+                    <input
+                        id="measurement"         
+                        type="text"
+                        aria-label="form of measurement"
+                        placeholder="Measurement"
+                        value={measurement}
+                        onChange={handleMeasurementChange} 
+                        name="measurement" >      
+                    </input>
+                </div>
+            </div>
             <br></br>
             <button className="button" type="submit" value="Add">Add</button>
         </form>

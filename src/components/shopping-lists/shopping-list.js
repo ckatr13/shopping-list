@@ -1,16 +1,21 @@
 import React from 'react';
 import './shopping-lists.css';
-import pencil from '../../pencil-60-119100.webp';
+import pencil from '../../edit.png';
+import trash from '../../trash.png';
 
 export const ShoppingList = (props) => {
-    const { list, removeList, viewLists, setViewLists, setListName } = props;
+    const { list, removeList, viewLists, setViewLists, setListName, recipes, resetAddState } = props;
 
     const handleRemove = () => {
         removeList(list.id);
     };
 
     const handleEdit = () => {
-       return [setViewLists(false), setListName(list.name)];
+        console.log(recipes);
+        return [setViewLists(false), 
+            setListName(list.name),
+            resetAddState(), 
+        ];
     };
 
     return (
@@ -31,7 +36,8 @@ export const ShoppingList = (props) => {
                 <button 
                     className="remove"
                     aria-label="Remove list"
-                    onClick={handleRemove}>X
+                    onClick={handleRemove}>
+                        <img className="trash" src={trash} />
                 </button>
             </div>
         </div>

@@ -1,11 +1,13 @@
 .row {
     height: 40px;
-    background-color: #8EF187;
+    background-color: #DBFBF4;
     display: flex;
-    border: 1px solid rgb(75, 75, 75);
     border-radius: 15px;
-    margin: 0px 20px;
-    /* background-image: linear-gradient(to right, rgb(252, 252, 217), #8EF187); */
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
+    color: #009372;
+    font-size: 18px;
+    margin-bottom: 10px;
   }
   
   .list {
@@ -17,16 +19,17 @@
     text-align: left;
     margin-left: 20px;
     align-items: center;
-    line-height: 0.7;
+    line-height: 5px;
   }
 
   h1 {
-      color: white;
+      color: #009372;
       display: inline;
   }
   
   .edit {
     width: 40px;
+    height: 40px;
     padding: 10px;
     background-color: unset;
     border: none;
@@ -44,47 +47,94 @@
 
   .remove:focus, .edit:focus {
     outline: none;
-    background-color: rgba(255, 255, 255, 0.5);
 }
   
   .pencil {
-    width: 40px;
-    height: 40px;
-    margin-left: -10px;
-    margin-top: -10px;
+    width: 29px;
+    margin-left: -20px;
+    margin-top: -5px;
     cursor: pointer;
+  }
+
+  .trash {
+    height: 29px;
+    margin-top: -5px;
+    margin-left: -5px;
   }
   
   .label {
     margin-right: 10px;
     height: 0px;
-    line-height: 0;
-    color: white;
+    line-height: 5px;
+    color: #009372;
+    margin-top: 18px;
+    font-size: 18px;
   }
   
   .add-list-form {
     display: flex;
+    padding-top: 60px;
     margin-top: 40px;
+    margin-bottom: 20px;
     width: 100vw;
     justify-content: left;
-    margin-bottom: 20px;
-    
+    z-index: 0;
+  }
+
+  .list-name-input {
+    display: flex;
+    background-color: #DBFBF4;
+    border-radius: 0px 10px 10px 0px;
+    height: 38px;
   }
   
   #title {
     height: 24px;
     margin-right: 10px;
-    width: 34vw;
+    width: 36vw;
+    margin-top: 5px;
+  }
+
+  input[type=text] {
+    color: #009372;
+    border: 1px #009372 solid;
+    /* border-radius: 0px 10px 10px 0px; */
+  }
+
+  input:focus {
+    outline: #009372 auto 1px;
   }
   
   .button {
-    height: 30px;
-    background-color: #8EF187;
+    height: 38px;
+    width: 103px;
+    background-color: #84C777;
     cursor: pointer;
+    border: none;
     border-radius: 10px;
-    border-color: #8EF187;
+    border: #DBFBF4 solid 1px;
+    font-family: 'Marker Felt', 'san-sarif';
+    color: #DBFBF4;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  .button:active {
+    background-color: #DBFBF4;
+  }
+
+  .button:focus {
+    outline: none;
   }
 
   .hide {
       display: none;
+  }
+
+  #list-name {
+    margin-top: 50px;
+    /* background: linear-gradient(to left, blue, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
   }

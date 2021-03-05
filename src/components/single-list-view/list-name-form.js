@@ -37,9 +37,8 @@ export const ListNameForm = (props) => {
     }
 
     return (
-        <div>
-            <form style={{ display: editName ? "block" : "none" }}>
-                <label className="lable">Edit Name</label>
+        <div className="edit-list-name-form-container" style={{ display: editName ? "block" : "none" }}>
+            <form className="edit-list-name-form">
                 <input 
                     id="update-title"         
                     type="text"
@@ -49,7 +48,7 @@ export const ListNameForm = (props) => {
                     onChange={handleTextChange}
                     name="body" 
                     required ></input>
-                <button onClick={handleSubmit}>Submit</button>
+                <button className="edit-list-name-button" onClick={handleSubmit}>Submit</button>
             </form>
         </div>
     )

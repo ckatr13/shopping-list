@@ -2,27 +2,28 @@
 nav {
   height: 80px;
   width: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: #D0F383;
   display: flex;
   justify-content: center;
   /* background-image: linear-gradient(to bottom, rgba(142, 241, 135, 1), rgba(0, 0, 0, 0.5)); */
 }
 
 .logo {
-  width: 70px;
-  background-color: rgb(56, 56, 56);
-  border-radius: 50%;
+  width: 54px;
+  height: 77px;
+  margin-top: 28px;
+  z-index: 2;
 }
 
 .back {
-  width: 50px;
+  width: 40px;
   margin-top: 10px;
-  margin-left: 10px;
+  float: left;
 }
 
 .back-button {
   position: absolute;
-  left: 0;
+  left: 8px;
   background-color: unset;
   border: none;
   cursor: pointer;
@@ -33,7 +34,28 @@ nav {
 }
 
 .edit-button {
-  margin-left: 10px;
+  margin-left: 24px;
+  margin-top: 32px;
+  height: 40px;
+  background-color: unset;
+  border: none;
+}
+
+.edit-button:focus {
+  outline: none;
+}
+
+.list-name-group {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D0F383;
+  border-radius: 0px 0px 50px 0px;
+  position: absolute;
+  left: 0px;
+  top:  80px;
 }
 
 .hamburger-menu {
@@ -47,14 +69,20 @@ nav {
 .App {
   text-align: center;
   min-height: 100vh;
+  min-width: 100%;
+  color: #009372;
   /* background-color: rgb(253, 253, 241); */
-  background-image: url('./background_search_mobile.jpg');
+  background-image: url('./bkg-image.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .list-container {
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.5);
+  padding-bottom: 30px;
   padding-top: 20px;
+  background-color: #07AC86;
+  border-radius: 0px 0px 50px 0px;
 }
 
